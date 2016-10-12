@@ -268,4 +268,8 @@ function spread(num) {
   fitBoth();
 }
 
-
+document.querySelector("input").onchange = function() {
+    [].slice.call( this.files ).forEach( function(v) {
+          $("body").append("<div>"+v.name+"</div>" );
+    });        
+};
